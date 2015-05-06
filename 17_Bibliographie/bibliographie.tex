@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[style=apa, bibencoding=utf8, backend=biber, maxcitenames=99]{biblatex}
+% Verschiedene styles:
+% - authoryear
+% - authoryear-comp
+% - numeric
+% - numeric-comp
+% - alphabetic
+% https://www.sharelatex.com/learn/Biblatex_citation_styles
+
+%\DeclareLanguageMapping{german}{german-apa}
+\DeclareLanguageMapping{english}{english-apa}
+%\DeclareFieldFormat[misc]{title}{\mkbibquote{\textit{#1}}} % aendert Titelformat fuer Misc eintrag von: Titel zu "Titel" kursiv
+\DeclareFieldFormat[misc]{title}{\textit{#1}}
+
+\addbibresource{LiteraturVerzeichnis.bib}
+\usepackage{url, hyperref}
+
+% Bibliographie Packages
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5ex plus 0.5ex minus 0.2ex}
+\begin{document}
+\tableofcontents
+\section{Literaturverzeichnis}
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern \parencite[siehe][S. 12-14]{lkgt}. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern \footcite[siehe][Kapitel 3. Seite 455]{bworld}.
+
+ Franz jagt im komplett verwahrlosten Taxi quer durch Bayern (\cite{dlb}).  Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.  Franz jagt im komplett verwahrlosten Taxi quer durch Bayern \parencite{article1}. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+
+
+\printbibliography
+\end{document}

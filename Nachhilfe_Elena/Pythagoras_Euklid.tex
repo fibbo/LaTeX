@@ -20,15 +20,15 @@
 \centering
 \begin{tikzpicture}
 \draw[help lines] (0,0) grid (8,8);
-\draw [semithick, draw=black, fill=red, opacity=0.2]
+\draw [semithick, draw=black, fill=red, fill opacity=0.2]
        (0,3) -- (5,0) -- (8,5) -- (3,8) -- cycle;
-\draw [semithick, draw=black, fill=yellow, opacity=0.2]
+\draw [semithick, draw=black, fill=yellow, fill opacity=0.2]
        (0,0) -- (0,3) -- (5,0) -- cycle;
-\draw [semithick, draw=black, fill=green, opacity=0.2]
+\draw [semithick, draw=black, fill=green, fill opacity=0.2]
        (5,0) -- (8,0) -- (8,5) -- cycle;
-\draw [semithick, draw=black, fill=green, opacity=0.2]
+\draw [semithick, draw=black, fill=green, fill opacity=0.2]
        (3,8) -- (8,8) -- (8,5) -- cycle;
-\draw [semithick, draw=black, fill=green, opacity=0.2]
+\draw [semithick, draw=black, fill=green, fill opacity=0.2]
        (0,8) -- (3,8) -- (0,3) -- cycle;
 \node at (4,4) {$c^2$};
 \node[left] at (0,1.5) {$a$};
@@ -54,5 +54,13 @@ Das Quadrat über a ist flächeninhaltsgleich zum Rechteck mit den Seiten $p$ un
 a^2 &= p\cdot c\\
 b^2 &= q\cdot c
 \end{align}
+
+\section{H"ohensatz des Euklid}
+
+Gegeben sei ein rechtwinkliges Dreieck mit der Höhe h, welche die Hypotenuse in die Abschnitte p und q teilt. Dann ist:
+
+\begin{equation}
+h^2 = p\cdot q
+\end{equation}
 
 \end{document}

@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage[ngerman]{babel}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\section{Satz von Pythagoras}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (8,8);
+\draw [semithick, draw=black, fill=red, opacity=0.2]
+       (0,3) -- (5,0) -- (8,5) -- (3,8) -- cycle;
+\draw [semithick, draw=black, fill=yellow, opacity=0.2]
+       (0,0) -- (0,3) -- (5,0) -- cycle;
+\draw [semithick, draw=black, fill=green, opacity=0.2]
+       (5,0) -- (8,0) -- (8,5) -- cycle;
+\draw [semithick, draw=black, fill=green, opacity=0.2]
+       (3,8) -- (8,8) -- (8,5) -- cycle;
+\draw [semithick, draw=black, fill=green, opacity=0.2]
+       (0,8) -- (3,8) -- (0,3) -- cycle;
+\node at (4,4) {$c^2$};
+\node[left] at (0,1.5) {$a$};
+\node[below] at (2.5,0) {$b$};
+\node[above,right] at (2.5,1.7) {$c$};
+\node[below] at (6.5,0) {$a$};
+
+\end{tikzpicture}
+\end{figure}
+
+Seien $a, b, c$ die Seiten eines Dreiecks mit der Seite $c$ (Hypotenuse), die sich stets gegenüber einem $90^\circ$-Winkel befindet, den $b$ auf $a$ bildet, dann ist das Quadrat über $c$ flächengleich zu der Summe der Quadrate über $a$ und $b$.
+
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+
+\section{Kathetensatz des Euklid}
+
+Seien $a, b, c$ die Seiten eines rechtwinkligen Dreiecks mit der Hypotenuse $c$. Teilt man dieses Dreieck an der Höhe $h$ und mit $p$ der Hypotenusenabschnitt über $a$, $q$ der entsprechende Abschnitt über $b$, so gilt:
+Das Quadrat über a ist flächeninhaltsgleich zum Rechteck mit den Seiten $p$ und $c$, und das Quadrat über $b$ ist flächeninhaltsgleich zum Rechteck mit den Seiten $q$ und $c$.
+
+\begin{align}
+a^2 &= p\cdot c\\
+b^2 &= q\cdot c
+\end{align}
+
+\end{document}

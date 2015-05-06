@@ -1,0 +1,27 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[ngerman]{babel}
+
+
+\title{\LaTeX\ leicht gemacht}
+
+\author{Hans Muster\\Universität Hier\thanks{bla@gmail.com} \and Peter Lustig\\Universität Dort\thanks{blub@gmail.com}}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+%\thispagestyle{empty}
+
+\newpage
+%\pagenumbering{roman}
+%\setcounter{page}{1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu erat nec lacus fringilla vehicula vitae et mauris. Sed pellentesque lorem ac ante mattis nec varius nibh suscipit. Nullam porttitor consectetur neque non consectetur. Nulla sollicitudin facilisis ante, in condimentum nibh congue a. Etiam massa metus, venenatis sed euismod nec, pretium at dui. In non ante a mi bibendum pellentesque eget vitae sem. Suspendisse aliquet gravida cursus.
+
+Ut mattis condimentum velit in cursus. Cras malesuada nisl sed nisi pellentesque fringilla. Fusce lectus orci, condimentum in hendrerit ac, consequat a velit. Quisque in tortor metus. Donec elementum ante at lorem convallis a blandit nunc imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus lorem eget ante tempor ac aliquam quam ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque fringilla, nisl id convallis pulvinar, nulla turpis tincidunt risus, et commodo velit tellus at dui. Ut in tortor in magna blandit eleifend eu non neque. Mauris eget lectus eu augue tincidunt fringilla vel id urna. Suspendisse venenatis egestas semper. Nullam elit dui, blandit non dictum vitae, vulputate ut dolor. Nam metus ante, viverra et adipiscing ut, bibendum euismod nisi.
+
+\end{document}

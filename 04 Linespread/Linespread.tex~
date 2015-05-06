@@ -1,0 +1,11 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+
+\begin{document}
+\linespread{2}\selectfont
+\blindtext
+
+\end{document}

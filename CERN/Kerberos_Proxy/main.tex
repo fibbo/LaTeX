@@ -1,0 +1,19 @@
+\documentclass{article}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\section{Permission denied on EOS}
+
+If running an operation that want's to create something on EOS and I get as an error that I don't have permission for it:
+
+\begin{itemize}
+\item If I'm working with a proxy, I'm mapped to user \texttt{lhcb001}
+\item If I'm working without proxy and am working with kerberos and this should be mapped to \texttt{pgloor}
+\item check with \texttt{eos ls -la /path/to/folder} the permission in that structure
+\item 
+\end{itemize}
+
+\end{document}

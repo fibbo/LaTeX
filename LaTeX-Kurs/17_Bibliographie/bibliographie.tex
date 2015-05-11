@@ -1,7 +1,8 @@
 \documentclass[10pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
 \usepackage[style=apa, bibencoding=utf8, backend=biber, maxcitenames=99]{biblatex}
 % Verschiedene styles:
 % - authoryear
@@ -11,10 +12,10 @@
 % - alphabetic
 % https://www.sharelatex.com/learn/Biblatex_citation_styles
 
-%\DeclareLanguageMapping{german}{german-apa}
-\DeclareLanguageMapping{english}{english-apa}
-%\DeclareFieldFormat[misc]{title}{\mkbibquote{\textit{#1}}} % aendert Titelformat fuer Misc eintrag von: Titel zu "Titel" kursiv
-\DeclareFieldFormat[misc]{title}{\textit{#1}}
+\DeclareLanguageMapping{german}{german-apa}
+% \DeclareLanguageMapping{english}{english-apa}
+\DeclareFieldFormat[misc,article]{title}{\textit{#1}}
+
 
 \addbibresource{LiteraturVerzeichnis.bib}
 \usepackage{url, hyperref}

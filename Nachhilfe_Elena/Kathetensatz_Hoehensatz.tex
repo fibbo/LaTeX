@@ -7,6 +7,7 @@
 \usepackage{amsmath} 
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{mathtools}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
 \begin{document}
@@ -38,7 +39,7 @@ Daraus folgt
 
 Analog wie der Beweis zum H"ohensatz verl"auft auch dieser Beweis. Es gilt:
 
-\[ a^2 = c^2-b^2=p^2+2pq+q^2-(q^2+h^2)=p^2+2pq+q^2-q^2-a^2+p^2=2p^2+2pq-a^2 \]
+\[ a^2 = c^2-b^2=p^2+2pq+q^2-(q^2+h^2)=p^2+2pq+q^2-q^2\underbrace{-a^2+p^2}_{\mathclap{\text{da ja gilt: } h^2 + p^2 = a^2}}=2p^2+2pq-a^2 \]
 
 vereinfacht folgt:
 
@@ -54,7 +55,7 @@ und analog folgt:
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.42\textwidth]{Hoehensatz}
+\includegraphics[width=0.35\textwidth]{Hoehensatz}
 \end{figure}
 
 

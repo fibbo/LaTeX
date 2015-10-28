@@ -1,9 +1,9 @@
-\documentclass[10pt]{article}
+\documentclass[10pt, a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage{csquotes}
-\usepackage[style=apa, bibencoding=utf8, backend=biber, maxcitenames=99]{biblatex}
+\usepackage[style=apa, bibencoding=utf8, backend=biber, minnames=2, maxnames=3]{biblatex}
 % Verschiedene styles:
 % - authoryear
 % - authoryear-comp
@@ -12,9 +12,9 @@
 % - alphabetic
 % https://www.sharelatex.com/learn/Biblatex_citation_styles
 
-\DeclareLanguageMapping{german}{german-apa}
-% \DeclareLanguageMapping{english}{english-apa}
-\DeclareFieldFormat[misc,article]{title}{\textit{#1}}
+%\DeclareLanguageMapping{german}{german-apa}
+\DeclareLanguageMapping{english}{english-apa}
+\DeclareFieldFormat[misc,article,book]{title}{\textbf{#1}}
 
 
 \addbibresource{LiteraturVerzeichnis.bib}
@@ -30,7 +30,7 @@
 \section{Literaturverzeichnis}
 Franz jagt im komplett verwahrlosten Taxi quer durch Bayern \parencite[siehe][S. 12-14]{lkgt}. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern \footcite[siehe][Kapitel 3. Seite 455]{bworld}.
 
- Franz jagt im komplett verwahrlosten Taxi quer durch Bayern (\cite{dlb}).  Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.  Franz jagt im komplett verwahrlosten Taxi quer durch Bayern \parencite{article1}. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
+Franz jagt im komplett verwahrlosten Taxi quer durch Bayern (\cite{dlb}).  Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.  Franz jagt im komplett verwahrlosten Taxi quer durch Bayern \parencite{article1}. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.
 
 
 \printbibliography

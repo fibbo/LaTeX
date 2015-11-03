@@ -10,8 +10,8 @@
 \usepackage{graphicx} %um grafiken einbinden zu können
 \usepackage[leftcaption]{sidecap} %für side caption %optionen: outercaption, innercaption, leftcaption, rightcaption
 
-\usepackage[slc=off]{caption} %für subfloats
-
+\usepackage[slc=on]{caption} %für subfloats
+\usepackage{subcaption}
 \usepackage{threeparttable}
 
 \usepackage{hyperref}
@@ -24,13 +24,12 @@
 
 \begin{figure}[h]
 \centering
-  \captionbox{Source: Internet}{\includegraphics[width=0.5\textwidth]{gull_picture}Source: Web}
+  \includegraphics[width=0.5\textwidth]{gull_picture}
 \end{figure}
 
 \begin{figure}[h]
   \centering
-      \includegraphics[width=0.5\textwidth]{pics/gull_picture}\par %bild nicht im gleichen ordner wie das LaTeX Dokument
-      Source: Internet
+      \reflectbox{\includegraphics[width=0.5\textwidth]{pics/gull_picture}}
   \caption{A picture of the same gull
            looking the other way!}
 \end{figure}
@@ -46,7 +45,7 @@
         \end{subfigure}%
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
           %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[t]{0.3\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{tiger_picture}
                 \caption{A tiger}
@@ -54,7 +53,7 @@
         \end{subfigure}%
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
           %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[t]{0.3\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{mouse_picture}
                 \caption{A mouse}
@@ -81,10 +80,7 @@
 Eine Figure kann auch einfach nur Text enthalten
 
 \blindtext
-
-
-
-\end{threeparttable}\par
+\end{threeparttable}
 \caption{\blindtext Ein einfaches Aufgabenblatt für Mathematiker\label{fig:formeln}}
 \end{figure}
 }

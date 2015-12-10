@@ -1,0 +1,150 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.3.17)  24 MAY 2015 16:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**C:/Users/Philipp/Documents/GitHub/LaTeX/tex.sx.com/captions_away_from_figure.
+tex
+
+(c:/Users/Philipp/Documents/GitHub/LaTeX/tex.sx.com/captions_away_from_figure.t
+ex
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(c:/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(c:/texlive/2014/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\Philipp\Documents\GitHub\LaTeX\tex.sx.com/captions_away_from_figure.a
+ux)
+\openout1 = `captions_away_from_figure.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+
+Overfull \hbox (4.04736pt too wide) in paragraph at lines 8--8
+[]\OT1/cmr/m/n/10 Symbol 
+ []
+
+
+Overfull \hbox (10.15848pt too wide) in paragraph at lines 8--8
+\OT1/cmr/m/n/10 Mapping 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 8.
+
+Overfull \hbox (4.76955pt too wide) in paragraph at lines 9--9
+\OT1/cmr/m/n/10 Parallel 
+ []
+
+
+Overfull \hbox (14.65843pt too wide) in paragraph at lines 9--9
+\OT1/cmr/m/n/10 Converter 
+ []
+
+
+Overfull \hbox (4.76955pt too wide) in paragraph at lines 11--11
+[]\OT1/cmr/m/n/10 Parallel
+ []
+
+
+Overfull \hbox (14.65843pt too wide) in paragraph at lines 11--11
+\OT1/cmr/m/n/10 Converter 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]\OT1/cmr/m/n/10 Cyclic
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 19.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 19.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 19.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 19.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 19.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 19.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 20.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 20.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 20.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 20.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 20.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 20.
+
+
+Overfull \hbox (105.98145pt too wide) in paragraph at lines 22--23
+ [][] 
+ []
+
+[1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(C:\Users\Philipp\Documents\GitHub\LaTeX\tex.sx.com/captions_away_from_figure.a
+ux) ) 
+Here is how much of TeX's memory you used:
+ 213 strings out of 493109
+ 2964 string characters out of 6138587
+ 55967 words of memory out of 5000000
+ 3758 multiletter control sequences out of 15000+600000
+ 4247 words of font info for 16 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,10n,25p,224b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfont
+s/latxfont/line10.pfb>
+Output written on C:\Users\Philipp\Documents\GitHub\LaTeX\tex.sx.com/captions_a
+way_from_figure.pdf (1 page, 57054 bytes).
+PDF statistics:
+ 36 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,27 @@
+\documentclass{article}
+\begin{document}
+\begingroup\setlength{\abovecaptionskip}{-6ex}
+\begin{figure*}[!t]
+\setlength{\unitlength}{0.13in} % selecting unit length
+\centering % used for centering Figure
+\begin{picture}(48,8.2) % picture environment with the size (dimensions) % 32 length units wide, and 15 units high.
+\put(3,4){\framebox(4,6){\parbox{1cm}{Symbol\\ Mapping} }}
+\put(10,4){\framebox(5,6){\parbox{1cm}{Serial\\ to\\ Parallel\\ Converter} }}
+\put(19,4){\framebox(4,6){\parbox{1cm}{IFFT} }}
+\put(27,4){\framebox(5,6){\parbox{1cm}{Parallel to Serial \\Converter} }}
+\put(36,4){\framebox(4,6){\parbox{1cm}{Cyclic Prefix} }}
+\put(43,4){\framebox(4,6){\parbox{1cm}{DAC} }}
+\put(0,7){\vector(1,0){3}}\put(7,7){\vector(1,0){3}}
+\put(15,5){\vector(1,0){4}} \put(17,6.4){.} \put(17,7.15){.} \put(15,7.8){\vector(1,0){4}}\put(15,9.2){\vector(1,0){4}}
+\put(23,5){\vector(1,0){4}} \put(25,6.4){.} \put(25,7.15){.} \put(23,8){\vector(1,0){4}}\put(23,9){\vector(1,0){4}}
+\put(32,7){\vector(1,0){4}} \put(40,7){\vector(1,0){3}}\put(47,7){\vector(1,0){3}}
+\put(0,8) {\parbox{1cm}{Input\\Data} } \put(8,8) {\textbf{X}}
+\put(16.2,5.2){${\small X}_{{\small N-1}}$} \put(16.2,8.2){${\small X}_{{\small 1}}$} \put(16.2,9.4){${\small X}_{{\small 0}}$} 
+\put(24.2,5.2){${\small x}_{{\small N-1}}$} \put(24.2,8.2){${\small x}_{{\small 1}}$} \put(24.2,9.4){${\small x}_{{\small 0}}$}
+\put(47.4,8) {x(t)}
+\end{picture}
+\caption{Block Diagram of OFDM transmitter} % title of the Figure
+\label{Model} % label to refer figure in text
+\end{figure*}
+\endgroup
+\end{document}

@@ -1,0 +1,141 @@
+\documentclass[10pt, xcolor={table}]{beamer}
+\usepackage[]{graphicx}
+\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\usepackage{listings}
+
+
+\newcommand{\backupbegin}{
+   \newcounter{framenumberappendix}
+   \setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumberappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumberappendix}} 
+}
+
+
+
+\usepackage{alltt}
+
+\usepackage{url,verbatim}
+\usepackage[ngerman]{babel}
+
+\usepackage{avant}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows,decorations.pathreplacing,calc,automata}
+% load extra stuff
+% \usetikzlibrary{shapes.misc,matrix,positioning,fit}
+
+% cross out text 
+\usepackage[normalem]{ulem}
+
+
+\usepackage[headheight=22pt]{beamerthemeboxes}
+%\usepackage{bbm}
+\usepackage{graphicx}
+\beamertemplatenavigationsymbolsempty 
+\setbeamercovered{transparent}
+
+% \definecolor{redve}{rgb}{0.604,0.008,0.00}
+\definecolor{redve}{rgb}{0,0.61,0.245}
+% \definecolor{uzh}{rgb}{0.188,0.522,0.306}
+\definecolor{uzh}{HTML}{0028a5}
+\setbeamertemplate{itemize item}{$\bullet$} 
+\setbeamercolor{title}{fg=uzh}
+\setbeamercolor{frametitle}{fg=uzh}
+\setbeamertemplate{sections/subsections in toc}[ball unnumbered]
+\setbeamercolor{section in toc}{fg=uzh,bg=white}
+\setbeamercolor{subsection in toc}{fg=uzh,bg=white}
+\setbeamercolor{result}{fg=black, bg=yellow}
+
+
+
+\addheadboxtemplate{\color[rgb]{1,1,1}}{\color{uzh} \underline{{\hspace{3pt}\includegraphics[scale=0.33]{uzh_logo_e_pos} 
+\hspace{0.55\paperwidth}\color{black} \tiny Einf"uhrung in \LaTeX} \hspace{11pt}}}
+
+\addfootboxtemplate{\color[rgb]{1,1,1}}{\color{black} %\tiny \quad  %bla 
+\hfill \tiny
+\insertframenumber / \inserttotalframenumber \hspace{5pt}}
+
+
+%% set item distance
+\newlength{\wideitemsep}
+\setlength{\wideitemsep}{\itemsep}
+\addtolength{\wideitemsep}{0.3em}
+\let\olditem\item
+\renewcommand{\item}{\setlength{\itemsep}{\wideitemsep}\olditem}
+
+
+
+% \titlegraphic{\includegraphics[width=0.3\textwidth]{uzh_logo_e_pos}\hspace*{4.75cm}}
+
+
+\usepackage{amsmath}
+
+\title[Installation von \LaTeX] % (optional, only for long titles)
+{Installation von \LaTeX}
+\author{Philipp Gloor}
+\institute[] % (optional)
+{\inst{1}philipp.gloor@gmail.com}
+\date[Feburar 2016] % (optional)
+{\LaTeX{} Einf"uhrung}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Was braucht es f"ur \LaTeX}
+\LaTeX ist nicht ein herk"ommliches Programm wie z.B. Word von Microsoft. Das heisst, es gibt keine
+\texttt{latex.exe} Datei, die man ausf"uhrt und dann mit \LaTeX arbeitet.
+\begin{itemize}
+  \item \LaTeX-Distribution (z.B. texlive oder Miktex)
+  \item (optional) Editor
+\end{itemize}
+
+Die Distribution ist das Herzst"uck von \LaTeX. Ohne die Distribution geht nichts. Der Editor
+ist lediglich ein Hilfsmittel, aber ein sehr wichtiges.
+\end{frame}
+
+
+\section{Distributionen}
+\begin{frame}{Distributionen}
+Wir werden die Distribution von texlive verwenden. Sie ist verf"ugbar f"ur alle g"angigen 
+Betriebssysteme (Windows, Mac, Linux).
+
+\begin{itemize}
+  \item texlive f"ur Windows: \url{https://www.tug.org/texlive/acquire-netinstall.html}
+  \item texlive f"ur Mac: \url{https://tug.org/mactex/mactex-download.html}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Editor}
+  Ein Editor ist nicht zwingend notwendig, erleichtert das Arbeiten mit \LaTeX aber immens. Es gibt eine vielzahl
+  von verschiedenen Editoren (\url{https://en.wikipedia.org/wiki/Comparison_of_TeX_editors}).
+
+  Einer der besten:
+  \begin{itemize}
+    \item texmaker (\url{http://www.xm1math.net/texmaker/})
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{texmaker}
+  
+\end{frame}
+
+\end{document}

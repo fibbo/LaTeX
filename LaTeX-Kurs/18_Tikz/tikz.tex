@@ -3,6 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+\usepackage{amsmath}
 \usepackage{url, hyperref}
 
 \setlength{\parindent}{0pt}
@@ -85,7 +88,36 @@ M"ogliche Befehle um die Linienbreite zu "andern:
 \caption{In Tikz kann man Winkel in Grad oder Radiant angeben. Will man es in Radiant angeben, muss man dies mit einen \texttt{r} so kennzeichnen.}
 \end{figure}
 
-\section{Verwendung von 'Nodes'}
+
+\begin{figure}
+\centering
+  \begin{tikzpicture}
+    \begin{axis}[
+    axis lines = left,
+    xlabel = Number of Data Points,
+    ylabel = {Number of Combinations},
+    legend style={at={(1,0.2)},anchor=east},
+    ]
+    \addplot [
+    domain=1:500, 
+    color=red,
+    ]
+    { factorial(x)/(factorial(x-3)*factorial(3))};
+    \addplot [
+    domain=1:500, 
+    color=blue,
+    ]
+    { x^3/factorial(3)};
+    \addlegendentry{$\binom{N}{3}$}
+    \addlegendentry{$\frac{N^3}{3!}$}
+    \end{axis}
+
+  \end{tikzpicture}
+    \caption{Binomial Growth with $\binom{N}{3}$ and the approximation $\frac{N^3}{3!}$. }
+  \label{fig:figure1}
+\end{figure}
+
+\section{Verwendung von "`Nodes"'}
 \begin{tikzpicture}
 \draw [thick, <->] (0,2) -- (0,0) -- (2,0);
 \node at (1,1) {yes};

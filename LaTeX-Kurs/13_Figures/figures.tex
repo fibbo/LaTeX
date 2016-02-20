@@ -10,15 +10,18 @@
 \usepackage{graphicx} %um grafiken einbinden zu können
 \usepackage[leftcaption]{sidecap} %für side caption %optionen: outercaption, innercaption, leftcaption, rightcaption
 
-\usepackage[slc=on]{caption} %für subfloats
-\usepackage{subcaption}
+% \usepackage[slc=on]{caption} %für subfloats
+% \usepackage{subcaption}
 \usepackage{threeparttable}
 
-\usepackage{hyperref}
+\usepackage{subfig}
 
+\usepackage{hyperref}
+\setcounter{lofdepth}{2}
 
 \begin{document}
-
+\listoffigures
+\newpage
 \section{Verschiedene Anwendungen von Figure}
 
 
@@ -35,31 +38,43 @@
 \end{figure}
 \newpage
 
-\begin{figure}[h]
-        \centering
-        \begin{subfigure}[t]{0.3\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{gull_picture}
-                \caption*{A gull}
-                \label{fig:gull}
-        \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[t]{0.3\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{tiger_picture}
-                \caption{A tiger}
-                \label{fig:tiger}
-        \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[t]{0.3\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{mouse_picture}
-                \caption{A mouse}
-                \label{fig:mouse}
-        \end{subfigure}
-        \caption{Pictures of animals}\label{fig:animals}
+% \begin{figure}[h]
+%         \centering
+%         \begin{subfigure}[t]{0.3\textwidth}
+%                 \centering
+%                 \includegraphics[width=\textwidth]{gull_picture}
+%                 \caption*{A gull}
+%                 \label{fig:gull}
+%         \end{subfigure}%
+%         ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+%           %(or a blank line to force the subfigure onto a new line)
+%         \begin{subfigure}[t]{0.3\textwidth}
+%                 \centering
+%                 \includegraphics[width=\textwidth]{tiger_picture}
+%                 \caption{A tiger}
+%                 \label{fig:tiger}
+%         \end{subfigure}%
+%         ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+%           %(or a blank line to force the subfigure onto a new line)
+%         \begin{subfigure}[t]{0.3\textwidth}
+%                 \centering
+%                 \includegraphics[width=\textwidth]{mouse_picture}
+%                 \caption{A mouse}
+%                 \label{fig:mouse}
+%         \end{subfigure}
+%         \caption{Pictures of animals}\label{fig:animals}
+% \end{figure}
+
+\begin{figure}
+\centering
+  \subfloat[Minicaption][Long caption]{\includegraphics[width=0.3\textwidth]{gull_picture}}~
+  \subfloat[Minicaption][Long caption]{\includegraphics[width=0.3\textwidth]{tiger_picture}}~
+  \subfloat[Minicaption][Long caption]{\includegraphics[width=0.3\textwidth]{mouse_picture}}
+
+  \subfloat[Minicaption][Long caption]{\includegraphics[width=0.3\textwidth]{gull_picture}}~
+  \subfloat[Minicaption][Long caption]{\includegraphics[width=0.3\textwidth]{tiger_picture}}~
+  \subfloat[Minicaption][Long caption]{\includegraphics[width=0.3\textwidth]{mouse_picture}}  
+  \caption{Overview}
 \end{figure}
 
 
@@ -75,12 +90,10 @@
 \floatstyle{boxed}
 \restylefloat{figure}\restylefloat{table}
 \begin{figure}[h]
-\begin{threeparttable} %p erzielt, dass die figure auf einer Seite speziell für floats platziert wird
 
 Eine Figure kann auch einfach nur Text enthalten
 
 \blindtext
-\end{threeparttable}
 \caption{\blindtext Ein einfaches Aufgabenblatt für Mathematiker\label{fig:formeln}}
 \end{figure}
 }

@@ -1,4 +1,6 @@
 \documentclass[10pt, xcolor={table}]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[]{graphicx}
 \usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
@@ -44,6 +46,44 @@
 % cross out text 
 \usepackage[normalem]{ulem}
 
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.9,0.9,0.9}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ %
+  backgroundcolor=\color{mygray},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=none,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{red},       % keyword style
+  language=,                 % the language of the code
+  morekeywords={begin, end, documentclass,usepackage,author, maketitle, newpage, title, date, linespread, selectfont, section, subsection, subsubsection, paragraph, subparagraph, tableofcontents, item, verb, setlength, parindent, parskip, cite, parencite, footcite, makeindex, printindex, includegraphics, textwidth, textbf, cline, multirow, multicolumn, hline, footnote,blindtext,renewcommand, pagestyle, label, ref, nameref, pageref, makebox, fbox, framebox, mbox, raggedleft, raggedright, centering, textrm, textsl, textit, textsc, textsf, texttt, setcounter},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}         % Palatino needs more leading (space between lines)
+
+\lstset{
+  literate={ö}{{\"o}}1
+           {ä}{{\"a}}1
+           {ü}{{\"u}}1
+           {Ü}{{\"U}}1
+}
 
 \usepackage[headheight=22pt]{beamerthemeboxes}
 %\usepackage{bbm}
@@ -66,7 +106,7 @@
 
 
 \addheadboxtemplate{\color[rgb]{1,1,1}}{\color{uzh} \underline{{\hspace{3pt}\includegraphics[scale=0.33]{uzh_logo_e_pos} 
-\hspace{0.55\paperwidth}\color{black} \tiny Einf"uhrung in \LaTeX} \hspace{11pt}}}
+\hspace{0.55\paperwidth}\color{black} \tiny Einführung in \LaTeX} \hspace{11pt}}}
 
 \addfootboxtemplate{\color[rgb]{1,1,1}}{\color{black} %\tiny \quad  %bla 
 \hfill \tiny
@@ -80,20 +120,19 @@
 \let\olditem\item
 \renewcommand{\item}{\setlength{\itemsep}{\wideitemsep}\olditem}
 
-
+\newcommand{\ltx}{\LaTeX}
 
 % \titlegraphic{\includegraphics[width=0.3\textwidth]{uzh_logo_e_pos}\hspace*{4.75cm}}
 
 
 \usepackage{amsmath}
 
-\title[Installation von \LaTeX] % (optional, only for long titles)
-{Installation von \LaTeX}
+\title[Einführung in \LaTeX] % (optional, only for long titles)
+{Einführung in \LaTeX}
 \author{Philipp Gloor}
 \institute[] % (optional)
 {\inst{1}philipp.gloor@gmail.com}
 \date[Feburar 2016] % (optional)
-{\LaTeX{} Einf"uhrung}
 
 \begin{document}
 
@@ -101,8 +140,8 @@
   \titlepage
 \end{frame}
 \begin{frame}{Was braucht es f"ur \LaTeX}
-\LaTeX ist nicht ein herk"ommliches Programm wie z.B. Word von Microsoft. Das heisst, es gibt keine
-\texttt{latex.exe} Datei, die man ausf"uhrt und dann mit \LaTeX arbeitet.
+\LaTeX\  ist nicht ein herk"ommliches Programm wie z.B. Word von Microsoft. Das heisst, es gibt keine
+\texttt{latex.exe} Datei, die man ausf"uhrt und dann mit \LaTeX\ arbeitet.
 \begin{itemize}
   \item \LaTeX-Distribution (z.B. texlive oder Miktex)
   \item (optional) Editor
@@ -128,14 +167,63 @@ Betriebssysteme (Windows, Mac, Linux).
   Ein Editor ist nicht zwingend notwendig, erleichtert das Arbeiten mit \LaTeX aber immens. Es gibt eine vielzahl
   von verschiedenen Editoren (\url{https://en.wikipedia.org/wiki/Comparison_of_TeX_editors}).
 
-  Einer der besten:
+  Eine Auswahl:
   \begin{itemize}
-    \item texmaker (\url{http://www.xm1math.net/texmaker/})
+    \item Texmaker (\url{http://www.xm1math.net/texmaker/})
+    \item TeXstudio - basiert auf texmaker (\url{http://texstudio.sourceforge.net/})
+    \item Emacs
+    \item Sublime Text
   \end{itemize}
 \end{frame}
 
-\begin{frame}{texmaker}
+\begin{frame}{Workflow}
+\LaTeX\ hat einen eigenen Workflow, der stark von dem von z.B. Word abweicht.
+
+\begin{itemize}
+  \item \texttt{.tex}: Quelldatei
+  \pause\item Kompilieren (pdf Datei wird erstellt)
+  \pause\item (automatisch) Hilfsdateien werden erstellt: z.B. \texttt{.toc, .aux, .lof}
+  \pause\item Kompilieren (Hilfsdateien werden ins Dokument eingebunden)
+\end{itemize}
   
+\end{frame}
+
+\begin{frame}{Aufbau eines \LaTeX\ Dokuments}
+  Ein \ltx\ Dokument besteht grunds"atzlich aus zwei Teilen:
+  \begin{itemize}
+    \item Pr"aambel
+    \item \textit{Document body}
+  \end{itemize}
+
+  Die Pr"aambel ist dort, wo alle Dokumentoptionen und Einstellungen gesetzt werden.
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Pr"aambel}
+
+\begin{lstlisting}
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{tikz}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Document body}
+Neben der Pr"aambel gibt es wie erw"ahnt den \textit{Document body} Teil. Das ist der Teil zwischen den beiden
+Befehlen \verb_\begin{document}_ und \verb_\end{document}_
+\begin{lstlisting}
+  \begin{document}
+    Alles was hier steht, gehört zum Inhalt
+  \end{document}
+\end{lstlisting}
+
 \end{frame}
 
 \end{document}

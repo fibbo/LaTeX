@@ -1,0 +1,13 @@
+\frametitle{Verbatim}
+
+Wie kann ich einen \ltx{} Befehl im Klartext schreiben? Logischerweise, wenn ich einen \ltx-Befehl verwende
+wird er von \ltx{} interpretiert. Wenn ich mir also eine Anleitung zu \ltx{} machen wollte, brauche ich einen
+speziellen Befehl.
+
+\begin{lstlisting}
+  \verb_<beliebiger latex befehl>_
+\end{lstlisting}
+
+Der \verb_\verb_ Befehl hat anstelle von geschwungenen Klammern einen Underscore als `Klammer' (ein + als Klammer w"urde
+auch funktionieren).
+

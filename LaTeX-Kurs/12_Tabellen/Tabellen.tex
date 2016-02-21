@@ -1,12 +1,14 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[10pt, a4paper,landscape]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[a4paper, left=1cm, right=1.6cm, top=1cm, bottom=1.6cm]{geometry}
 \usepackage[ngerman]{babel}
 \usepackage{blindtext}
 \usepackage[singlelinecheck = off]{caption} %damit caption an der tabelle ausgerichtet ist
 \usepackage{threeparttable, booktabs} %booktabs fuer \bottomrule \toprule
 \usepackage{multirow}
-
+\usepackage[table]{xcolor}
+\usepackage{lipsum}
 
 
 \setlength{\abovecaptionskip}{3pt plus 3pt minus 2pt} 
@@ -71,9 +73,17 @@ Diese Tabelle steht im Text.
 \hline
 \end{tabular}
 
+{
+\rowcolors{2}{white}{red!10}
+\begin{tabular}{ l | p{20cm}  r }
+  \textbf{a} & \textbf{b} & \textbf{c} \\
+  \hline \hline
+  16:00 -- 17:00 & \lipsum[1] & blubb \\
+  17:00 -- 18:00 & Mehr Text & Endlich Ende \\
+  18:00 -- 19:00 & \multicolumn{2}{r}{Endlich Abendessenszeit} \\
+\end{tabular}\\[1em]
+}
 \section{Gleitumgebungen}
-
-
 
 \begin{table}[h]
 \caption{\blindtext}

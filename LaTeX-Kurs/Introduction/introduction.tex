@@ -2,7 +2,11 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[]{graphicx}
-\usepackage[]{color}
+\usepackage{url,verbatim}
+
+\usepackage[]{xcolor}
+\usepackage{hyperref}
+\hypersetup{urlcolor=-green!50}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -30,8 +34,7 @@
 
 
 \usepackage{alltt}
-
-\usepackage{url,verbatim}
+\usepackage{parskip}
 \usepackage[ngerman]{babel}
 
 \usepackage{avant}
@@ -54,17 +57,18 @@
   backgroundcolor=\color{mygray},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
   basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  belowskip=-2em,
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
   commentstyle=\color{mygreen},    % comment style
   deletekeywords={...},            % if you want to delete keywords from the given language
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  frame=none,                    % adds a frame around the code
+  frame=single,                    % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{red},       % keyword style
-  language=,                 % the language of the code
-  morekeywords={begin, end, documentclass,usepackage,author, maketitle, newpage, title, date, linespread, selectfont, section, subsection, subsubsection, paragraph, subparagraph, tableofcontents, item, verb, setlength, parindent, parskip, cite, parencite, footcite, makeindex, printindex, includegraphics, textwidth, textbf, cline, multirow, multicolumn, hline, footnote,blindtext,renewcommand, pagestyle, label, ref, nameref, pageref, makebox, fbox, framebox, mbox, raggedleft, raggedright, centering, textrm, textsl, textit, textsc, textsf, texttt, setcounter},            % if you want to add more keywords to the set
+  language=tex,                 % the language of the code
+  morekeywords={begin, end, documentclass,usepackage,author, maketitle, newpage, title, date, linespread, selectfont, section, subsection, subsubsection, paragraph, subparagraph, tableofcontents, item, verb, setlength, parindent, parskip, cite, parencite, footcite, makeindex, printindex, includegraphics, textwidth, textbf, cline, multirow, multicolumn, hline, footnote,blindtext,renewcommand, pagestyle, label, ref, nameref, pageref, makebox, caption, fbox, framebox, mbox, raggedleft, raggedright, centering, textrm, textsl, textit, textsc, textsf, texttt, setcounter},            % if you want to add more keywords to the set
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
@@ -105,8 +109,7 @@
 
 
 
-\addheadboxtemplate{\color[rgb]{1,1,1}}{\color{uzh} \underline{{\hspace{3pt}\includegraphics[scale=0.33]{uzh_logo_e_pos} 
-\hspace{0.55\paperwidth}\color{black} \tiny Einführung in \LaTeX} \hspace{11pt}}}
+\addheadboxtemplate{\color[rgb]{1,1,1}}{\color{uzh} \underline{\hspace{10cm} \tiny Einführung in \LaTeX} }
 
 \addfootboxtemplate{\color[rgb]{1,1,1}}{\color{black} %\tiny \quad  %bla 
 \hfill \tiny
@@ -124,14 +127,14 @@
 
 % \titlegraphic{\includegraphics[width=0.3\textwidth]{uzh_logo_e_pos}\hspace*{4.75cm}}
 
-
+% \setlength{\parskip}{1.5ex}
 \usepackage{amsmath}
 
 \title[Einführung in \LaTeX] % (optional, only for long titles)
 {Einführung in \LaTeX}
 \author{Philipp Gloor}
 \institute[] % (optional)
-{\inst{1}philipp.gloor@gmail.com}
+{philipp.gloor@gmail.com}
 \date[Feburar 2016] % (optional)
 
 \begin{document}
@@ -139,6 +142,36 @@
 \begin{frame}
   \titlepage
 \end{frame}
+
+\begin{frame}[t]\frametitle{Kurs"ubersicht}
+    
+\begin{itemize}
+  \item Werkzeuge (Distribution, Editor)
+  \item Grundelemente f"ur den Textsatz mit \ltx
+  \item Dokumentstruktur
+  \item Titelseite
+  \item Eigenheiten von \ltx (Anf"urungszeichen, Silbentrennung)
+  \item Gliederungen
+  \item Auflistungen
+  \item Labels/Referenzen
+  \item Seitenlayout/Geometrie
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]\frametitle{Kurs"ubersicht}
+    
+\begin{itemize}
+  \item Tabellen
+  \item Figures
+  \item Mathematischer Formelsatz
+  \item Indexverzeichnis
+  \item Bibliographie
+  \item Tikz
+  \item Beamer
+  \item Github - Version Control
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Was braucht es f"ur \LaTeX}
 \LaTeX\  ist nicht ein herk"ommliches Programm wie z.B. Word von Microsoft. Das heisst, es gibt keine
 \texttt{latex.exe} Datei, die man ausf"uhrt und dann mit \LaTeX\ arbeitet.
@@ -224,6 +257,61 @@ Befehlen \verb_\begin{document}_ und \verb_\end{document}_
   \end{document}
 \end{lstlisting}
 
+Jeglicher Inhalt der vor \verb_\begin{document}_ oder nach \verb_\end{document}_ kommt wird ignoriert.
 \end{frame}
 
+\begin{frame}[fragile]\frametitle{\ltx{} Befehle}
+    
+Wenn man in \ltx\ etwas fett setzen will, muss man folgenden Befehl verwenden:
+\begin{lstlisting}
+  \textbf{Dieser Text wird fett gesetzt}
+\end{lstlisting} Und aussehen sollte es dann so:
+\textbf{Dieser Text wird fett gesetzt}
+\par
+Dieser Befehl verwendet ein Argument, n"amlich den Teil in den geschwungenen Klammern.
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{\ltx{} Befehle}
+    
+Manchmal habne Befehle auch optionale Argumente.
+
+\begin{lstlisting}
+  \usepackage[ngerman]{babel}
+
+  \caption[Short cap.]{Long cap.}
+\end{lstlisting}
+
+\texttt{ngerman} definiert die Sprache, mit der das Paket \texttt{babel} arbeiten muss (das n steht f"ur die neue
+Deutsche Rechtschreibung)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Kommentare}
+    
+\ltx{} ist einer Programmiersprache sehr "ahnlich. Man k"onnte sagen, man programmiert seine arbeit.
+Weil \ltx{} viele Befehle verwendet ist eine Kommtarfunktion sehr n"utzlich um gewisse Stellen zu annotieren.
+
+\begin{lstlisting}
+  \textbf{Fettgedruckter Text} % dieser Befehl setzt den Text in fetter Schrift
+\end{lstlisting}
+
+Das \% Zeichen wird verwendet um einen Kommentar zu erfassen. Alles was auf einer Zeile (automatischer
+Zeilenumbruch inklusive) nach einem Prozentzeichen erscheint, wird ignoriert.
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Verbatim}
+    
+Wie kann ich einen \ltx{} Befehl im Klartext schreiben? Logischerweise, wenn ich einen \ltx-Befehl verwende
+wird er von \ltx{} interpretiert. Wenn ich mir also eine Anleitung zu \ltx{} machen wollte, brauche ich einen
+speziellen Befehl.
+
+\begin{lstlisting}
+  \verb_<beliebiger latex befehl>_
+\end{lstlisting}
+
+Der \verb_\verb_ Befehl hat anstelle von geschwungenen Klammern einen Underscore als `Klammer' (ein + als Klammer w"urde
+auch funktionieren).
+
+\end{frame}
 \end{document}
